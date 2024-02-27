@@ -1,3 +1,27 @@
+main, body {
+    margin: 0;
+    padding: 0;
+    background-color: #afa7ab;
+}
+
+header {
+    background-color: #5a7ec6;
+    color:#3c3c3c;
+    margin: 0.2em;
+    
+    
+    
+
+}
+
+#headTitle {
+    border-style:inset;
+    border-width: 0.2em;
+    border-color: gold;
+    text-align: center;
+    font-size: 3em;
+}
+
 .over-budget {
     background-color: red;
 }

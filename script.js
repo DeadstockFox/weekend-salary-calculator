@@ -37,6 +37,7 @@ function submitForm(event){
         <td>${employees[employeeCount].id}</td>
         <td>${employees[employeeCount].title}</td>
         <td>${employees[employeeCount].annualSalary}</td>
+        <td><button onClick="employeeFire(event)">Delete</button><td>
     </tr>
     `;
     
@@ -51,7 +52,7 @@ function submitForm(event){
 };
 
 //Function to figure out monthly cost using 'employees' array of objects
-//Adds cost to footer section of table
+//Adds cost to footer section of table & alerts if over budget (>20,000)
 function monthlyCost() {
     let salarySum = 0;
     for(employeeIndiv of employees){
@@ -73,3 +74,11 @@ function monthlyCost() {
 
     return salarySum;
 }
+
+//function to remove employee from table and re-run monthly cost
+function employeeFire(event) {
+    //let button = event.target.parentElement;
+    //console.log(button);
+    event.target.parentElement.parentElement.remove();
+    monthlyCost();
+};
