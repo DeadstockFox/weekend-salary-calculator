@@ -1,17 +1,7 @@
 //console.log("Dog");
 
-/*
-let firstNameData = document.querySelector("#firstName");
-let lastNameData = document.querySelector("#lastName");
-let idData = document.querySelector("#id");
-let titleData = document.querySelector("#title");
-let annualSalaryData = document.querySelector("#annualSalary");
-*/
-
-
 let employees = []
 let employeeCount = 0;
-
 
 //Function to add employee to array of objects for easy reference
 function createEmployee(){
@@ -50,16 +40,8 @@ function submitForm(event){
     </tr>
     `;
     
-    monthlyCost();  
-    /*--------------------------------------
-    let monthlyCostVar = monthlyCost();
+    monthlyCost(); 
     
-    let footerInfoTable = document.getElementById("monthlyCostData");
-    footerInfoTable.innerHTML =`
-    <p>Total Monthly: $${monthlyCostVar}</P>
-    `;
-   --------------------------------------------- */
-
     //updates index counter
     employeeCount++;
     //console.log(employeeCount);
@@ -69,6 +51,7 @@ function submitForm(event){
 };
 
 //Function to figure out monthly cost using 'employees' array of objects
+//Adds cost to footer section of table
 function monthlyCost() {
     let salarySum = 0;
     for(employeeIndiv of employees){
@@ -82,6 +65,11 @@ function monthlyCost() {
     footerInfoTable.innerHTML =`
     <p>Total Monthly: $${salarySum}</P>
     `;
+
+    if(salarySum > 20000){
+        let budgetAlert = document.getElementById("monthlyCostData").className = "over-budget";
+        console.log(budgetAlert);
+    }
 
     return salarySum;
 }
