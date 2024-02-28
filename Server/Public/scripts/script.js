@@ -5,6 +5,7 @@ let employeeCount = 0;
 
 //Function to add employee to array of objects for easy reference
 function createEmployee(){
+
     let employee = {
         firstName: document.querySelector("#firstName").value,
         lastName: document.querySelector("#lastName").value,
@@ -17,11 +18,11 @@ function createEmployee(){
     //console.log(employees);
 };
 
-
+//main function
 function submitForm(event){
     //preventing page from reloading
     event.preventDefault();
-    
+
     //targets form id with inputs
     let employeeHandbook = document.getElementById("employeeHandbook");
 
@@ -29,6 +30,7 @@ function submitForm(event){
     //console.log(employees[employeeCount]);
 
     //Adds new row to table using object created in above function 
+    //Also adds button at end for employeeFire() function
     let employeeInfoTable = document.querySelector("#employeeData");
     employeeInfoTable.innerHTML +=`
     <tr>
@@ -64,7 +66,7 @@ function monthlyCost() {
 
     let footerInfoTable = document.getElementById("monthlyCostData");
     footerInfoTable.innerHTML =`
-    <p>Total Monthly: $${salarySum}</P>
+    <p id="monthly">Total Monthly: $${salarySum}</P>
     `;
 
     if(salarySum > 20000){
@@ -77,8 +79,6 @@ function monthlyCost() {
 
 //function to remove employee from table and re-run monthly cost
 function employeeFire(event) {
-    //let button = event.target.parentElement;
-    //console.log(button);
     event.target.parentElement.parentElement.remove();
     monthlyCost();
 };

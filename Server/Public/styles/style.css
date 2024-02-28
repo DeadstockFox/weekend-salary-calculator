@@ -15,6 +15,10 @@ h2 {
     padding-left: .3em;
 }
 
+p {
+    margin-left: .4em;
+}
+
 #headTitle {
     border-style:inset;
     border-width: 0.2em;
@@ -61,5 +65,6 @@ h2 {
     font-size: 2em;
     color: red;
     font-weight: bold;
+    margin-left: .2em;
 
 }
