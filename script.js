@@ -37,7 +37,7 @@ function submitForm(event){
         <td>${employees[employeeCount].id}</td>
         <td>${employees[employeeCount].title}</td>
         <td>${employees[employeeCount].annualSalary}</td>
-        <td><button onClick="employeeFire(event)">Delete</button><td>
+        <td><button onClick="employeeFire(event)">Delete</button></td>
     </tr>
     `;
     

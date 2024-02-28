@@ -8,10 +8,11 @@ header {
     background-color: #5a7ec6;
     color:#3c3c3c;
     margin: 0.2em;
-    
-    
-    
 
+}
+
+h2 {
+    padding-left: .3em;
 }
 
 #headTitle {
@@ -22,6 +23,43 @@ header {
     font-size: 3em;
 }
 
+#employeeDataHead tr {
+    margin-left: .5em;
+}
+
+#employeeDataHead th {
+    background-color: #5a7ec6;
+    border: 1px ridge black;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.2em;
+}  
+
+#employeeHandbook {
+    display:inline-table;
+    border: 1px ridge black;
+    margin-left: .5em;
+}
+#firstName, #lastName, #id, #title, #annualSalary, #submiter{
+    margin: .4em;
+}
+
+#employeeDataFull{
+    display: inline-table;
+    border-spacing: 0;
+    margin-left: .5em;
+}
+
+
+#employeeData td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center; 
+}
+
 .over-budget {
-    background-color: red;
+    font-size: 2em;
+    color: red;
+    font-weight: bold;
+
 }

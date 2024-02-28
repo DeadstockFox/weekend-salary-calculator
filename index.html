@@ -17,17 +17,17 @@
        <input data-testid="idInput" id="id" placeholder="ID" type="number"/>
        <input data-testid="titleInput" id="title" placeholder="Title" type="text"/>
        <input data-testid="annualSalaryInput" id="annualSalary" placeholder="Annual Salary" type="number"/>
-       <button data-testid="submitButton">Submit</button>
+       <button data-testid="submitButton" id="submiter">Submit</button>
     </form>
     <h2>Employees</h2>
-    <table>
-       <thead>
+    <table id="employeeDataFull">
+       <thead id="employeeDataHead">
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
             <th>ID</th>
             <th>Title</th>
-            <th>Annual Salary</th>
+            <th>Annual Salary</th> 
           </tr>
        </thead>
        <tbody id="employeeData">
